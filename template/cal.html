@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="" >Number 1</label>
+            <input type="text" name="num1" id=""  placeholder="Enter First Number" value="{{n1}}">
+        </div>
+        <br>
+        <div>
+            <label for="" >Number 2</label>
+            <input type="text" name="num2" id=""  placeholder="Enter Second Number" value="{{n2}}" >
+        </div>
+        <br>
+        <div>
+            <label for="operator">Choose a Operator:</label>
+
+            <select name="op" id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="" >Output</label>
+            <input type="text" value="{{n}}" >
+        </div>
+        <br>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        
+    </form>
+</body>
+</html>
